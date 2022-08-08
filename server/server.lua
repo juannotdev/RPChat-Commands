@@ -9,8 +9,6 @@ if (whcolor == nil or whcolor == '') then
   print("There is no webhook color assinged to the RP Chat Logs.")
 end
 
-if EnableRPChat == true then
-
   -- Me Command
   RegisterCommand('me', function(source, args, user)
   if #args > 0 then
@@ -99,7 +97,6 @@ if EnableRPChat == true then
     sendToDiscord(whcolor, "Command Log: /dark", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`",date)
     end
     end, false)
-end
 
 -- DON'T TOUCH THIS UNLESS YOU KNOW WHAT YOU ARE DOING
 function stringsplit(inputstr, sep)
