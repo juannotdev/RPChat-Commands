@@ -1,5 +1,5 @@
 # RPChat-Commands
-# This is a fork from [SenkaWolf](https://github.com/SenkaWolf/FiveM_Standalone-RP-Chat-Command-Basic-Pack)
+# This is a fork from [SenkaWolf](https://github.com/SenkaWolf/FiveM_Standalone-RP-Chat-Command-Basic-Pack)'s RP Chat Script.
 # All credits goes to him.
 # Changes are:
 # 1. Easier to configure.
