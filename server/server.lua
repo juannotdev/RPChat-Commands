@@ -11,90 +11,67 @@ end
 
   -- Me Command
   RegisterCommand('me', function(source, args, user)
-  if #args > 0 then
     local name = GetPlayerName(source)
     local chatMessage = table.concat(args, " ")
-    local date = os.date(("%A, %B %m, %Y | %I:%M:%S %p"))
     TriggerClientEvent("sendProximityMessageMe", -1, source, name, chatMessage)
-    sendToDiscord(whcolor, "Command Log: /me", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`",date)
-    end
+    sendToDiscord(whcolor, "Command Log: /me", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
     end, false)
 
   -- Do Command
   RegisterCommand('do', function(source, args, user)
-  if #args > 0 then
     local name = GetPlayerName(source)
     local chatMessage = table.concat(args, " ")
-    local date = os.date(("%A, %B %m, %Y | %I:%M:%S %p"))
     TriggerClientEvent("sendProximityMessageDo", -1, source, name, chatMessage)
-    sendToDiscord(whcolor, "Command Log: /do", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`",date)
-    end
+    sendToDiscord(whcolor, "Command Log: /do", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
     end, false)
 
   -- OOC Command
   RegisterCommand('ooc', function(source, args, user)
-  if #args > 0 then
     local name = GetPlayerName(source)
     local chatMessage = table.concat(args, " ")
-    local date = os.date(("%A, %B %m, %Y | %I:%M:%S %p"))
-  	TriggerClientEvent('sendProximityMessageOOC', -1, source, name, chatMessage)
-    sendToDiscord(whcolor, "Command Log: /ooc", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`",date)
-    end
+    TriggerClientEvent('sendProximityMessageOOC', -1, source, name, chatMessage)
+    sendToDiscord(whcolor, "Command Log: /ooc", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
     end, false)
 
   -- Global Do Command
   RegisterCommand('gdo', function(source, args, user)
-  if #args > 0 then
     local name = GetPlayerName(source)
     local chatMessage = table.concat(args, " ")
-    local date = os.date(("%A, %B %m, %Y | %I:%M:%S %p"))
     TriggerClientEvent('chatMessage', -1, "[Global Do] " .. name, {93, 182, 229}, chatMessage)
-    sendToDiscord(whcolor, "Command Log: /gdo", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`",date)
-    end 
+    sendToDiscord(whcolor, "Command Log: /gdo", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
     end, false)
 
     -- Global Me Command
   RegisterCommand('gme', function(source, args, user)
-  if #args > 0 then
     local name = GetPlayerName(source)
     local chatMessage = table.concat(args, " ")
-    local date = os.date(("%A, %B %m, %Y | %I:%M:%S %p"))
     TriggerClientEvent('chatMessage', -1, "[Global Me] " .. name, {240, 200, 80}, chatMessage)
-    sendToDiscord(whcolor, "Command Log: /gme", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`",date)
-    end
+    sendToDiscord(whcolor, "Command Log: /gme", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
     end, false)
 
   -- Twitter Command  
   RegisterCommand('twt', function(source, args, user)
-  if #args > 0 then
     local name = GetPlayerName(source)
     local chatMessage = table.concat(args, " ")
-    local date = os.date(("%A, %B %m, %Y | %I:%M:%S %p"))
-  	TriggerClientEvent('chatMessage', -1, "^4[Twitter] ^0(^4@" .. name .. "^0)", {47, 92, 115}, chatMessage)
-    sendToDiscord(whcolor, "Command Log: /twt", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`",date)
-    end
+    TriggerClientEvent('chatMessage', -1, "^4[Twitter] ^0(^4@" .. name .. "^0)", {47, 92, 115}, chatMessage)
+    sendToDiscord(whcolor, "Command Log: /twt", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
     end, false)
 
   -- GOOC Command  
   RegisterCommand('gooc', function(source, args, user)
-  if #args > 0 then
     local name = GetPlayerName(source)
     local chatMessage = table.concat(args, " ")
-    local date = os.date(("%A, %B %m, %Y | %I:%M:%S %p"))
-  	TriggerClientEvent('chatMessage', -1, "[GOOC] " .. name, {155, 155, 155}, chatMessage)
-    sendToDiscord(whcolor, "Command Log: /gooc", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`",date)
+    TriggerClientEvent('chatMessage', -1, "[GOOC] " .. name, {155, 155, 155}, chatMessage)
+    sendToDiscord(whcolor, "Command Log: /gooc", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
     end
     end, false)
 
   -- Darkweb Command  
   RegisterCommand('dark', function(source, args, user)
-  if #args > 0 then
-    local darkNumber = math.random(100000, 999999)
     local name = GetPlayerName(source)
     local chatMessage = table.concat(args, " ")
-    local date = os.date(("%A, %B %m, %Y | %I:%M:%S %p"))
-    TriggerClientEvent('chatMessage', -1, "[Dark] anonymous_"..darkNumber, {128, 128, 128}, chatMessage)
-    sendToDiscord(whcolor, "Command Log: /dark", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`",date)
+    TriggerClientEvent('chatMessage', -1, "[Dark] anonymous", {128, 128, 128}, chatMessage)
+    sendToDiscord(whcolor, "Command Log: /dark", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
     end
     end, false)
 
