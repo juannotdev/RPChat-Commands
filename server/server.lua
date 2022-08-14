@@ -63,7 +63,6 @@ end
     local chatMessage = table.concat(args, " ")
     TriggerClientEvent('chatMessage', -1, "[GOOC] " .. name, {155, 155, 155}, chatMessage)
     sendToDiscord(whcolor, "Command Log: /gooc", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
-    end
     end, false)
 
   -- Darkweb Command  
@@ -72,7 +71,6 @@ end
     local chatMessage = table.concat(args, " ")
     TriggerClientEvent('chatMessage', -1, "[Dark] anonymous", {128, 128, 128}, chatMessage)
     sendToDiscord(whcolor, "Command Log: /dark", "**Player Using Command:\n"..name.." | Server ID: "..source.."\n\nMessage:**\n".."`"..chatMessage.."`")
-    end
     end, false)
 
 -- DON'T TOUCH THIS UNLESS YOU KNOW WHAT YOU ARE DOING
